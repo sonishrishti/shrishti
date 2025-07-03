@@ -21,6 +21,7 @@
   font-family: "Source Code Pro", monospace;
   position: relative;
   width: fit-content;
+  color: rgb(255, 153, 1);
 }
 
 .intro h1::before,
@@ -48,37 +49,46 @@ h1::after {
 }
 
 .name {
-  font-size: clamp(.5rem, 3vw + 1rem, 3rem);
-  font-weight: 400;
+  font-size: clamp(.1rem, 3vw + .5rem, 3rem);
   opacity: 0;
   transform: translateY(3rem);
   animation: fadeInUp 2s ease calc(var(--typewriterSpeed) + 2s) forwards;
 }
 
-.second-section{
-  display: flex; /* ✅ enables horizontal layout */
-  gap: 2rem; /* space between boxes */
-  padding: 2rem;
+.sub {
+  opacity: 0;
+  transform: translateY(3rem);
+  animation: fadeInUp 2s ease calc(var(--typewriterSpeed) + 3s) forwards;
 }
 
+.second-section{
+  /*display: grid; /* ✅ enables horizontal layout */
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem; /* space between boxes */
+  padding: 2rem;
+  background-color: rgb(255, 127, 206);
+}
+
+/*Education section*/
 .education{
-  background: teal;
+  /*background: teal;*/
   margin: 0;
   font-family: "Source Sans Pro", sans-serif;
   min-height: 100vh;
-  width: 100vw;
   display: grid;
   padding-top: 4rem;
+  border-radius: 50px;
 }
 
 .education h1 {
   font-size: clamp(1rem, 3vw + 1rem, 4rem);
+  color: #F5F5DC;
   position: relative;
   font-family: "Source Code Pro", monospace;
-  color: white;
   width: fit-content;
   text-align: center;
   margin: 0 auto;
+  /*text-decoration: underline wavy rgb(255, 153, 1) 2px;*/
 }
 
 .vertical-timeline-element-content {
@@ -88,8 +98,9 @@ h1::after {
 }
 
 .date {
-  color: rgb(94, 203, 203);
+  color: rgb(89, 216, 216);
 }
+
 
 @keyframes typewriter {
   to {
