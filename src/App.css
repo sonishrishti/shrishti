@@ -2,24 +2,31 @@
   --bg-color: #F5F5DC;
   --typewriterSpeed: 6s;
   --typewriterCharacters: 16;
+  margin: 0;
+  overflow-x: hidden; /* Prevent extra horizontal space */
+}
+
+/* This ensures paddings and borders are included in the width/height calculations.*/
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
 .app-container {
   margin: 0;
   font-family: "Source Sans Pro", sans-serif;
   min-height: 100vh;
-  width: 100vw;
+  width: 100%;
   display: grid;
   place-content: center;
   align-content: center;
   text-align: center;
+  border-bottom: .5rem solid #000000;
 }
 
 .intro h1 {
   font-size: clamp(1rem, 3vw + 1rem, 4rem);
   position: relative;
   font-family: "Source Code Pro", monospace;
-  position: relative;
   width: fit-content;
   color: rgb(255, 153, 1);
 }
@@ -58,12 +65,11 @@ h1::after {
 .sub {
   opacity: 0;
   transform: translateY(3rem);
-  animation: fadeInUp 2s ease calc(var(--typewriterSpeed) + 3s) forwards;
+  animation: fadeInUp 2s ease calc(var(--typewriterSpeed) + 3.2s) forwards;
 }
 
 .second-section{
   /*display: grid; /* ✅ enables horizontal layout */
-  grid-template-columns: 1fr 1fr;
   gap: 2rem; /* space between boxes */
   padding: 2rem;
   background-color: rgb(255, 127, 206);
@@ -75,9 +81,7 @@ h1::after {
   margin: 0;
   font-family: "Source Sans Pro", sans-serif;
   min-height: 100vh;
-  display: grid;
   padding-top: 4rem;
-  border-radius: 50px;
 }
 
 .education h1 {
@@ -97,10 +101,69 @@ h1::after {
   padding: 2em 3em !important; 
 }
 
+/* change the color of the line*/
+.vertical-timeline::before {
+  background: #F5F5DC;
+}
+
 .date {
   color: rgb(89, 216, 216);
 }
 
+/* about me section*/
+.aboutme{
+  /*background: teal;*/
+  display: flex;
+  flex-wrap: wrap;  
+  font-family: "Source Sans Pro", sans-serif;
+  /*min-height: 100vh;*/
+  padding: 4rem 2rem 4rem 2rem; /* top/right/bottom/left */
+  gap: 1.5rem;
+}
+
+
+.heading {
+  flex: 1 1 35%; /* grow and shrink, with base 35% */
+  min-width: 250px; /* so it doesn’t get too narrow */
+  max-width: 100%;
+  margin: 0;
+  display: flex;
+}
+
+.heading h1 {
+  font-size: clamp(1rem, 3vw + 1rem, 4rem);
+  color: #000000;
+  font-family: "Source Code Pro", monospace;
+  width: 100%;
+  text-align: left;
+  margin: 0 auto;
+  /*text-decoration: underline wavy rgb(255, 153, 1) 2px;*/
+}
+
+.list{
+  flex: 1 1 60%;
+  min-width: 250px;
+  margin:0;
+  align-items: center;
+}
+
+.list p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0;
+  border-style: dashed;
+  border-color: rgb(255, 127, 206);
+  width: fit-content;
+  padding: 2rem 2rem 2rem 2rem;
+  box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25),
+    0 0.4em 1.25em 0 rgba(0, 0, 0, 0.15) !important;
+}
+
+p.centered-left-text {
+  margin: 0 auto;        /* center the <p> element horizontally */
+  text-align: left;      /* align the text inside to the left */
+  max-width: 600px;      /* optional: prevent it from stretching too wide */
+}
 
 @keyframes typewriter {
   to {
@@ -127,5 +190,23 @@ h1::after {
     float: none !important;
     color: rgb(44, 44, 44);
     margin-top: 1.5em;
+  }
+}
+
+@media (max-width: 600px) {
+  .aboutme {
+    flex-direction: column;
+    padding: 2rem 1rem; /* Optional: tighter padding */
+  }
+
+  .heading,
+  .list {
+    flex: none; /* prevent stretching */
+    width: 100%;
+  }
+
+  .heading h1 {
+    text-align: center;
+    margin-bottom: 1rem; /* add consistent spacing */
   }
 }

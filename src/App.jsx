@@ -32,7 +32,7 @@ function App() {
                 let isworkIcon = element.icon === "work";
                 return (
                   <VerticalTimelineElement
-                    contentStyle={{ background: '#F5F5DC'}}
+                    contentStyle={{ background: '#F5F5DC', color:'#000000', borderStyle: "dashed", borderColor: "rgb(255, 153, 1)"}}
                     key={element.key}
                     date={element.date}
                     dateClassName="date"
@@ -49,20 +49,27 @@ function App() {
                     <p id="description">
                       {element.description}
                     </p>
-
                   </VerticalTimelineElement>
                 )
               })
             }
           </VerticalTimeline>
-        </div>
-        
+        </div>        
       </div>
 
-        
-
       <div className = "aboutme">
-        <h1>What do I like apart from my Lala?</h1>
+        <div className = "heading">
+          <h1>What do I like apart from my Lala?</h1>
+        </div>
+        <div className="list">
+          <p class="centered-left-text">
+            1. Hari naam, hari katha. <br />
+            2. Authentic Indian desserts made with love <b><i>at home</i></b>. <br />
+            3. Longgg, serene drives. <br />
+            4. Cooking for my loved ones!<br/>
+            5. Constantly tring out new/old things. 
+          </p>
+        </div>
       </div>
     </>
 
