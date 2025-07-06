@@ -69,7 +69,7 @@ h1::after {
 }
 
 .second-section{
-  /*display: grid; /* ✅ enables horizontal layout */
+  /*display: grid; /* enables horizontal layout */
   gap: 2rem; /* space between boxes */
   padding: 2rem;
   background-color: rgb(255, 127, 206);

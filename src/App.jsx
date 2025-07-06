@@ -62,12 +62,12 @@ function App() {
           <h1>What do I like apart from my Lala?</h1>
         </div>
         <div className="list">
-          <p class="centered-left-text">
+          <p className="centered-left-text">
             1. Hari naam, hari katha. <br />
             2. Authentic Indian desserts made with love <b><i>at home</i></b>. <br />
             3. Longgg, serene drives. <br />
             4. Cooking for my loved ones!<br/>
-            5. Constantly tring out new/old things. 
+            5. Constantly trying out new/old things. 
           </p>
         </div>
       </div>
