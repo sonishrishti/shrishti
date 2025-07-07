@@ -71,6 +71,13 @@ function App() {
           </p>
         </div>
       </div>
+
+      <div className = "marriage">
+        <div className = "mheading">
+          <h1> What is shaadi for me?</h1>
+        </div>
+        <h1 className = "mformula">Shaadi = Seva, Respect, Understanding</h1>
+      </div>
     </>
 
   );

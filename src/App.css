@@ -121,7 +121,6 @@ h1::after {
   gap: 1.5rem;
 }
 
-
 .heading {
   flex: 1 1 35%; /* grow and shrink, with base 35% */
   min-width: 250px; /* so it doesn’t get too narrow */
@@ -165,6 +164,45 @@ p.centered-left-text {
   max-width: 600px;      /* optional: prevent it from stretching too wide */
 }
 
+.marriage{
+  background-color: rgb(255, 153, 1);
+  padding: 4rem;
+  text-align: center;
+}
+
+.mheading {
+  flex: 1 1 35%; /* grow and shrink, with base 35% */
+  min-width: 250px; /* so it doesn’t get too narrow */
+  max-width: 100%;
+  margin: 0;
+  display: flex;
+}
+
+.mheading h1 {
+  font-size: clamp(1rem, 3vw + 1rem, 4rem);
+  color: #000000;
+  font-family: "Source Code Pro", monospace;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  /*text-decoration: underline wavy rgb(255, 153, 1) 2px;*/
+}
+
+.mformula{
+  font-size: clamp(1rem, 3vw + 1rem, 4rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  margin: 2rem auto;
+  text-align: center;
+  padding: 2rem;
+  border-style: dashed;
+  border-color: rgb(253, 216, 182);
+  color:rgb(250, 250, 250);
+}
+
+/* animation*/
 @keyframes typewriter {
   to {
     left: 100%;
@@ -210,3 +248,4 @@ p.centered-left-text {
     margin-bottom: 1rem; /* add consistent spacing */
   }
 }
+
