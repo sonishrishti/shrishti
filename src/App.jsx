@@ -5,13 +5,20 @@ import timelineElements from './timelineElements';
 import { FaLaptopCode } from "react-icons/fa";
 import { PiStudentFill } from "react-icons/pi";
 import { PiHandsPrayingFill } from "react-icons/pi";
-
+import { useTypewriter, Cursor } from 'react-simple-typewriter';
 
 function App() {
   let IconStyle = {background: "rgb(255, 153, 1)"};
   let workIconimg = <FaLaptopCode />;
   let eduIconimg = <PiStudentFill />;
   let namaste = <PiHandsPrayingFill />;
+
+  {/*Right side of the shaadi formula*/}
+  const [madj] = useTypewriter({
+    words: ['Seva', 'Understanding', 'Adjustment', 'Lifelong commitment'],
+    loop:{},
+    typeSpeed: 100,
+  });
 
   return (
     <>
@@ -76,7 +83,13 @@ function App() {
         <div className = "mheading">
           <h1> What is shaadi for me?</h1>
         </div>
-        <h1 className = "mformula">Shaadi = Seva, Respect, Understanding</h1>
+        <h1 className = "mformula">
+          Shaadi = {' '}
+          <span>
+            {madj}
+          </span>
+          <Cursor/>
+        </h1>
       </div>
     </>
 

@@ -73,6 +73,7 @@ h1::after {
   gap: 2rem; /* space between boxes */
   padding: 2rem;
   background-color: rgb(255, 127, 206);
+  border-bottom: .5rem solid #000000;
 }
 
 /*Education section*/
@@ -119,6 +120,7 @@ h1::after {
   /*min-height: 100vh;*/
   padding: 4rem 2rem 4rem 2rem; /* top/right/bottom/left */
   gap: 1.5rem;
+  border-bottom: .5rem solid #000000;
 }
 
 .heading {
@@ -168,6 +170,7 @@ p.centered-left-text {
   background-color: rgb(255, 153, 1);
   padding: 4rem;
   text-align: center;
+  border-bottom: .5rem solid #000000;
 }
 
 .mheading {
