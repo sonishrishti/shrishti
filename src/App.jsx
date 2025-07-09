@@ -32,7 +32,7 @@ function App() {
       <div className="app-container">
         <div className="intro">
           <h1>Jai Shri Krishna {namaste}</h1>
-          <p className="name">I am Shrishti Soni.</p>
+          <p className="name">I am Shrishti Soni. </p>
           <p className = "sub">and you are entering my world!</p>
         </div>
       </div>
