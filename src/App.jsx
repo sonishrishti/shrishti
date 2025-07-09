@@ -22,7 +22,7 @@ function App() {
 
   {/*Right side of the shaadi formula*/}
   const [madj] = useTypewriter({
-    words: ['Seva', 'Team work', 'Understanding', 'Adjustment', 'Lifelong commitment'],
+    words: ['Seva', 'Team work', 'Adjustment', 'Forever'],
     loop:{},
     typeSpeed: 100,
   });
@@ -91,7 +91,7 @@ function App() {
           <h1> What is shaadi for me?</h1>
         </div>
         <h1 className = "mformula">
-          Shaadi = {' '}
+          Shaadi =  {"\u00A0"} {/*Adding space*/}
           <span>
             {madj}
           </span>

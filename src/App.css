@@ -193,7 +193,8 @@ p.centered-left-text {
 }
 
 .mformula{
-  font-size: clamp(1rem, 3vw + 1rem, 4rem);
+  font-size: clamp(0.65rem, 2vw + 0.65rem, 2rem);
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -230,7 +231,6 @@ p.centered-left-text {
   justify-content: center;
   gap: 1.5rem;
   position: relative;
-  z-index: 1; /* on top of animated flowers */
 }
 
 .card {
@@ -241,7 +241,7 @@ p.centered-left-text {
   border: 2px dashed #ff99cc;
   padding: 1rem 2rem;
   border-radius: 1rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
   text-decoration: none;
   color: #000;
   transition: transform 0.3s ease, background 0.3s ease;
