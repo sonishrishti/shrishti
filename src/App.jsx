@@ -5,6 +5,9 @@ import timelineElements from './timelineElements';
 import { FaLaptopCode } from "react-icons/fa";
 import { PiStudentFill } from "react-icons/pi";
 import { PiHandsPrayingFill } from "react-icons/pi";
+import { FaInstagram } from "react-icons/fa";
+import { AiFillLinkedin } from "react-icons/ai";
+import { CgWebsite } from "react-icons/cg";
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
 
 function App() {
@@ -12,10 +15,14 @@ function App() {
   let workIconimg = <FaLaptopCode />;
   let eduIconimg = <PiStudentFill />;
   let namaste = <PiHandsPrayingFill />;
+  let websiteicon = <CgWebsite />;
+  let insta = <FaInstagram />;
+  let linkedin = <AiFillLinkedin />;
+
 
   {/*Right side of the shaadi formula*/}
   const [madj] = useTypewriter({
-    words: ['Seva', 'Understanding', 'Adjustment', 'Lifelong commitment'],
+    words: ['Seva', 'Team work', 'Understanding', 'Adjustment', 'Lifelong commitment'],
     loop:{},
     typeSpeed: 100,
   });
@@ -91,6 +98,26 @@ function App() {
           <Cursor/>
         </h1>
       </div>
+
+      <div className="contact">
+        <h1>Where can you connect?</h1>
+        <div className="contact-links">
+          <a href="https://www.divydishaa.com/" className="card">{websiteicon} DivyDishaa Web</a>
+          <a href="https://www.instagram.com/divydishaa/" className="card">{insta} DivyDishaa Insta</a>
+          <a href="https://www.instagram.com/tookthebaitfm/" className="card">{insta} Took the bait?</a>
+          <a href="https://www.linkedin.com/in/shrishti-soni/" className="card">{linkedin} Linkedin</a>
+        </div>
+      </div>
+
+      {/*<div className = "contact">
+        <h1>Where can you connect?</h1>
+        <p className="links">
+          <a href='https://www.divydishaa.com/'>DivyDishaa Web</a>
+          <a href='https://www.instagram.com/divydishaa/'>DivyDishaa Insta</a>
+          <a href='https://www.instagram.com/tookthebaitfm/'>Took the bait?</a>
+          <a href='https://www.linkedin.com/in/shrishti-soni/'>Linkedin</a>
+        </p>
+      </div>*/}
     </>
 
   );
