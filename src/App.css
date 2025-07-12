@@ -68,6 +68,73 @@ h1::after {
   animation: fadeInUp 2s ease calc(var(--typewriterSpeed) + 3.2s) forwards;
 }
 
+.scroll-down-arrow {
+  font-size: 2rem;
+  color: rgb(255, 153, 1); /* Match your design */
+  animation: bounce 2s infinite;
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  z-index: 10;
+}
+
+/*Parents*/
+.parents{
+  gap: 2rem; /* space between boxes */
+  padding: 2rem;
+  background-color: rgb(255, 153, 1);
+  /*background-image: url("/tile.svg"); /*custom made svg*/
+  border-bottom: .5rem solid #000000;
+  text-align: center;
+}
+
+.parents h1{
+  font-size: clamp(1rem, 3vw + 1rem, 4rem);
+  color: #fff0f5;
+  position: relative;
+  font-family: "Source Code Pro", monospace;
+  width: fit-content;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 2rem
+}
+
+.parent-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.parent-card {
+  background-color: #fff0f5;
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 300px;
+  max-width: 90vw;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+  text-align: left;
+}
+
+.parent-card:hover {
+  transform: translateY(-5px);
+}
+
+.parent-card h2 {
+  margin-bottom: 1rem;
+  color: rgb(255, 153, 1);
+  font-family: "Source Code Pro", monospace;
+}
+
+.parent-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
 .second-section{
   /*display: grid; /* enables horizontal layout */
   gap: 2rem; /* space between boxes */
@@ -270,6 +337,15 @@ p.centered-left-text {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(10px);
   }
 }
 

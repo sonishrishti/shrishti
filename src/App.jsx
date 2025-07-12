@@ -8,6 +8,7 @@ import { PiHandsPrayingFill } from "react-icons/pi";
 import { FaInstagram } from "react-icons/fa";
 import { AiFillLinkedin } from "react-icons/ai";
 import { CgWebsite } from "react-icons/cg";
+import { FaChevronDown } from "react-icons/fa";
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
 
 function App() {
@@ -35,6 +36,25 @@ function App() {
           <p className="name">I am Shrishti Soni. </p>
           <p className = "sub">and you are entering my world!</p>
         </div>
+        <div className="scroll-down-arrow">
+          <FaChevronDown />
+        </div>
+      </div>
+
+      <div className = "parents">
+        <h1>Amma - Papa</h1>
+         <div className="parent-cards"> 
+            <div className="parent-card papa">
+              <h2>Amma</h2>
+              <p>House wife</p>
+            </div>
+            <div className="parent-card mumma">
+              <h2>Papa</h2>
+              <p>Business man - </p>
+              <p>Automobile spareparts</p>
+            </div>
+          </div>
+
       </div>
 
       <div className="second-section">
@@ -108,16 +128,6 @@ function App() {
           <a href="https://www.linkedin.com/in/shrishti-soni/" className="card">{linkedin} Linkedin</a>
         </div>
       </div>
-
-      {/*<div className = "contact">
-        <h1>Where can you connect?</h1>
-        <p className="links">
-          <a href='https://www.divydishaa.com/'>DivyDishaa Web</a>
-          <a href='https://www.instagram.com/divydishaa/'>DivyDishaa Insta</a>
-          <a href='https://www.instagram.com/tookthebaitfm/'>Took the bait?</a>
-          <a href='https://www.linkedin.com/in/shrishti-soni/'>Linkedin</a>
-        </p>
-      </div>*/}
     </>
 
   );
