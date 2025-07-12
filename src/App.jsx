@@ -42,17 +42,17 @@ function App() {
       </div>
 
       <div className = "parents">
-        <h1>Amma - Papa</h1>
+        <h1>Maa - Papa</h1>
          <div className="parent-cards"> 
             <div className="parent-card papa">
-              <h2>Amma</h2>
+              <h2>Maa</h2>
               <p> Monika Sanjive Soni</p>
               <p>House wife</p>
             </div>
             <div className="parent-card mumma">
               <h2>Papa</h2>
               <p>Sanjive P Soni</p>
-              <p>Business man - Automobile spareparts</p>
+              <p>Business man - Automobile spareparts (dealing in heavy and commercial vehicles)</p>
             </div>
           </div>
 
